@@ -3,7 +3,7 @@ Hoang Chuong Nguyen, Tianyu Wang, [Jose M. Alvarez](https://alvarezlopezjosem.gi
 
 \[[Link to paper](https://openaccess.thecvf.com/content/CVPR2024/html/Nguyen_Mining_Supervision_for_Dynamic_Regions_in_Self-Supervised_Monocular_Depth_Estimation_CVPR_2024_paper.html)\]
 
-The self-supervised joint learning of depth, camera motion and object motion encouter the depth scale ambiguity issue in dynamic region. In this work, we propose a framework to address this issue and mine reliable supervision for learning depth in dynamic region. Our solution is:
+We propose a framework to address this the depth scale ambiguity issue in dynamic region and mine reliable supervision for learning depth in dynamic region. Our solution is:
 
 - ✅ **Scene Decomposition**: Decompose the scene into static regions and individual moving objects, whose depths are estimated independently.
 - ✅ **Depth Scale Alignment (DSA) module**: Introduce a novel DSA module to solve the scale ambiguity among each dynamic object and the static background.
