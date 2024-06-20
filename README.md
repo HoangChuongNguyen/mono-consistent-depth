@@ -18,7 +18,7 @@ href="https://www.youtube.com/watch?v=E4jPf_wCQvk&t=160s">
 
 ## Overview
 
-There exist different pair of object depth and motion that could satisfy the photometric constraint. However, it is difficult to determinine which is the correct. This is the root of the scale ambiguity issue in dynamic region. 
+There exist different pair of object depth and motion that could satisfy the photometric constraint. However, it is difficult to determinine which is the correct one. This is the root of the scale ambiguity issue in dynamic region. 
 
 <p align="center">
   <img src="assets/scale_ambiguity.jpg" alt="Depth scale ambiguity issue in dynamic region" width="300" />
