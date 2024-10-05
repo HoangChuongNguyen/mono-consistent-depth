@@ -70,11 +70,6 @@ When evaluate the model, remember to specific the pretrained model path (i.e. ev
 ## 👀 Pre-trained Models
 Our pre-trained models can be downloaded [here](https://drive.google.com/drive/folders/1-p6Bfa-6GQR3BirAhefE0UwjF5sHzrLF?usp=sharing). To evaluate these models, you need to specify eval_model_load_path in the config file. 
 
-## ✅ Todo:
-[√] Code for using masks from a pre-trained object detection network.
-
-[ ] Code for self-supervised mask setting
-
 ## ✏️ Citation
 
 If you find our work useful or interesting, please cite our paper:
