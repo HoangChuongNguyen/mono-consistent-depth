@@ -72,7 +72,7 @@ Our pre-trained models can be downloaded [here](https://drive.google.com/drive/f
 
 ## ✏️ Citation
 
-If you find our work useful or interesting, please cite our paper:
+If you find our work useful or interesting, please consider citing our paper:
 
 ```latex
 @inproceedings{nguyen2024mining,
