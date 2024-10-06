@@ -1,7 +1,7 @@
 
-# Mining Supervision for Dynamic Regions in Self-Supervised Monocular Depth Estimation
+# [CVPR2024] Mining Supervision for Dynamic Regions in Self-Supervised Monocular Depth Estimation
 
-Hoang Chuong Nguyen, Tianyu Wang, [Jose M. Alvarez](https://alvarezlopezjosem.github.io/), [Miaomiao Liu](https://users.cecs.anu.edu.au/~mliu/) - CVPR 2024
+Hoang Chuong Nguyen, Tianyu Wang, [Jose M. Alvarez](https://alvarezlopezjosem.github.io/), [Miaomiao Liu](https://users.cecs.anu.edu.au/~mliu/)
 
 \[[Link to paper](https://openaccess.thecvf.com/content/CVPR2024/html/Nguyen_Mining_Supervision_for_Dynamic_Regions_in_Self-Supervised_Monocular_Depth_Estimation_CVPR_2024_paper.html)\]
 
