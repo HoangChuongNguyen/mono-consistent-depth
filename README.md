@@ -65,7 +65,7 @@ python depth_eval.py ./config/cityscapes/diffnet_pretrained_mask.yaml
 
 
 
-When evaluate the model, remember to specific the pretrained model path (i.e. eval_model_load_path in the config file). Otherwise, the best model is automatically loaded. 
+When evaluate the model, remember to specify the pretrained model path (i.e. eval_model_load_path in the config file). Otherwise, the best model is automatically loaded. 
 
 ## 👀 Pre-trained Models
 Our pre-trained models can be downloaded [here](https://drive.google.com/drive/folders/1-p6Bfa-6GQR3BirAhefE0UwjF5sHzrLF?usp=sharing). To evaluate these models, you need to specify eval_model_load_path in the config file. 
