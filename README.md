@@ -35,7 +35,7 @@ pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torc
 Download the pre-processed Cityscapes dataset (~250Gb) using the following commands. Unzip all zip files and place them under data/cityscapes
 
 ```bash
-cd data && mkdirs cityscapes && cd cityscapes
+cd data && mkdir cityscapes && cd cityscapes
 gdown 19jRLWDr79UdAFT4fwmflXZHobFdr51Bm && unzip gt_depths.zip && rm -f gt_depths.zip
 gdown 1Hw3ZrAvnV8qkfmONdud9vcB7HmmmH96v && unzip gt_dynamic_object_mask.zip && rm -f gt_dynamic_object_mask.zip
 gdown 1K07r-eQkCPUQsn04E1eobA8Ew5UgzGDO && unzip SEEM_mask.zip && rm -f SEEM_mask.zip
