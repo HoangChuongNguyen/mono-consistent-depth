@@ -1,0 +1,104 @@
+
+
+
+# ------------------------------ Shared params ------------------------------
+# Depth network architecture
+device: 'cuda'
+depth_net_type: 'diffnet'
+pose_net_type: 'diffnet'
+depth_encoder_pretrained: True
+encoder_use_randomize_layernorm: False # CORL2020 model only
+tf_imageNet_checkpoint_path: False # CORL2020 model only
+# many_depth_teacher_freeze_epoch: 1000 # ManyDepth model only
+# Loss weight
+ssim_c1: 'inf'
+ssim_c2: 0.000009
+rgb_consistency_weight: 2.0
+ssim_weight: 3.0
+photometric_error_weight: 1.0
+depth_smoothing_weight: 0.002
+sparsity_loss_weight: 0.02
+consistency_loss_weight: 0.01
+# Dataloading
+batch_size: 12
+height: 192
+width: 512
+loaded_frame_idxs: [0, -1, 1]
+num_scales: 4
+num_workers: 4
+img_ext: "png"
+train_data_dir: null
+train_file_path: null
+val_data_dir: null
+val_file_path: null
+val_depth_data_dir: null
+val_depth_file_path: null
+val_gt_depth_path: null
+val_gt_mask_path: null
+test_depth_data_dir: null
+test_depth_file_path: null
+test_gt_depth_path: null
+test_gt_mask_path: null
+# Training setting
+initial_depth_pose_epochs: [0, 1]
+initial_raft_epochs: [1, 2]
+reduce_lr_epochs_list: [10, 20, 40]
+nb_gpus: 1
+learning_rate: 0.0002
+optim_beta: 0.9
+use_pretrained_mask: True
+# Evaluation
+first_epoch_eval_steps: 250
+eval_steps: 1000
+eval_and_save_every_epoch: 1
+# Logging
+log_path: null
+
+# -------------------------------- Stage 1: Pixel-wise --------------------------------
+models_to_load: ["depth_net", "pose_net", "raft"]
+epochs: 15
+pixelwise_depthnet_load_weights_folder: null
+
+# -------------------------------- Stage 1.1 (optional): Slot Attention --------------------------------
+slot_attention_load_weights_folder: null
+
+# ------------------------------ Stage 1.2 (optional): Ground Segmentation ------------------------------
+ground_segmentation_load_weights_folder: null
+
+# ------------------------------- Stage 1.3 (optional): Object Detection --------------------------------
+object_detection_load_weights_folder: null
+
+# -------------------------------- Stage 2: Object depthnet --------------------------------
+object_depthnet_load_weights_folder: null
+# Loss
+object_depth_smoothing_weight: 0.02
+# Training setting
+object_depthnet_epochs: 5
+object_learning_rate: 0.0002
+object_optim_beta: 0.9
+# Dataloading
+raw_mask_path: null
+raw_road_mask_path: null
+# Parameter for raw masks processing
+is_dynamic_threshold: 0.5
+flow_threshold: 1.0
+object_mask_size_theshold: 0.005
+middle_portion: 20
+num_cores: -1 # Number of CPU cores used for masks processing. Setting to -1 means use all cores. 
+
+# -------------------------------- Stage 3: Depth Scale Alignment --------------------------------
+dsa_load_path: null
+dsa_epochs: 20
+dsa_lr: 0.001
+dsa_reduce_lr_epoch: [3, 10]
+dsa_batch_size: 32
+
+# -------------------------------- Stage 4: Final depthnet --------------------------------
+dynamic_depth_loss_weight: 0.1
+final_depthnet_epochs: 5
+final_depthnet_learning_rate: 0.00002 
+final_depthnet_load_weights_folder: null
+final_depthnet_depth_eval_steps: 1000
+
+# --------------------------------------- Evaluation ---------------------------------------
+eval_model_load_path: null

@@ -1,0 +1,14 @@
+opencv-python
+tqdm
+tensorboard
+scipy
+numpy==1.21.6
+imageio==2.9.0
+matplotlib==3.4.3
+Pillow==9.2.0
+scikit-image==0.18.3
+pyyaml
+tensorboardX
+joblib
+yacs
+gdown

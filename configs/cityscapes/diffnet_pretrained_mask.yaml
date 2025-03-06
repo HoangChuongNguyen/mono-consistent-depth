@@ -1,0 +1,41 @@
+
+
+# ------------------------------ Shared params ------------------------------
+use_pretrained_mask: True
+
+# -------------------------------- Stage 1: Pixel-wise --------------------------------
+# Depth network architecture
+device: 'cuda'
+depth_net_type: 'diffnet'
+pose_net_type: 'diffnet'
+# Dataloading
+height: 192
+width: 512
+img_ext: "png"
+train_data_dir: "./data/cityscapes/citiscapes_512x1024"
+train_file_path: "./splits/cityscapes_preprocessed/train_files.txt"
+val_data_dir: "./data/cityscapes/cityscapes_val_512x1024"
+val_file_path: "./splits/cityscapes_preprocessed/val_files.txt"
+
+val_depth_data_dir: "./data/cityscapes/leftImg8bit_sequence"
+val_depth_file_path: "./splits/cityscapes/val_files.txt"
+val_gt_depth_path: "./data/cityscapes/gt_depths/val_gt_depths"
+val_gt_mask_path: "./data/cityscapes/gt_dynamic_object_mask/val_mask_class"
+
+test_depth_data_dir: "./data/cityscapes/leftImg8bit_sequence"
+test_depth_file_path: "./splits/cityscapes/test_files.txt"
+test_gt_depth_path: "./data/cityscapes/gt_depths/test_gt_depths"
+test_gt_mask_path: "./data/cityscapes/gt_dynamic_object_mask/test_mask_class"
+# Training setting
+nb_gpus: 1
+# Logging
+log_path: "./checkpoints/citiscapes/diffnet"
+pixelwise_depthnet_load_weights_folder: null
+
+# -------------------------------- Stage 2: Object depthnet --------------------------------
+raw_mask_path: "./data/cityscapes/SEEM_mask/masks"
+raw_road_mask_path: "./data/cityscapes/SEEM_mask/road_masks"
+object_depthnet_load_weights_folder: null
+
+# --------------------------------------- Evaluation ---------------------------------------
+eval_model_load_path: null

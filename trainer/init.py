@@ -1,0 +1,7 @@
+from train_pixel_wise import PixelWiseTrainer
+from train_ground_segmentation import GroundSegmentationTrainer
+from train_slot_attention import SlotAttentionTrainer
+from train_object_detection import ObjectDetectionTrainer
+from train_object_depthnet import ObjectDepthTrainer
+from train_depth_scale_alignment import DepthScaleAlignmentTrainer
+from train_final_depthnet import FinalDepthTrainer
