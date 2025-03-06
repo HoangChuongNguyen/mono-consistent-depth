@@ -52,7 +52,7 @@ Note that we store model's predictions in hard disks for dataloading. Thus, the 
 To reproduce the results from our paper on CityScape dataset, run:
 
 ```bash
-# For training using pre-train segmentation model
+# For training using pre-trained segmentation model
 python runner.py ./config/cityscapes/diffnet_pretrained_mask.yaml
 # For fully unsupervised training
 python runner.py ./config/cityscapes/diffnet_pred_mask.yaml
@@ -63,7 +63,7 @@ To resume training at a particular stage, specify the model_load_path in the con
 For depth evaluation, run:. 
 
 ```bash
-# For training using pre-train segmentation model
+# For training using pre-trained segmentation model
 python depth_eval.py ./config/cityscapes/diffnet_pretrained_mask.yaml
 # For fully unsupervised training
 python depth_eval.py ./config/cityscapes/diffnet_pred_mask.yaml
